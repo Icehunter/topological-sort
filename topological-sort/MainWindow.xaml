@@ -1,0 +1,47 @@
+﻿<Window x:Class="topological_sort.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow"
+        Width="525"
+        Height="350"
+        MinWidth="525"
+        MinHeight="350"
+        Loaded="Window_Loaded">
+    
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <DockPanel DockPanel.Dock="Top">
+                <DockPanel LastChildFill="True">
+                    <DockPanel Margin="2"
+                               DockPanel.Dock="Left">
+                        <Button x:Name="btn_g"
+                                Click="btn_g_Click"
+                                Padding="5 0">
+                            Import
+                        </Button>
+                    </DockPanel>
+                    <DockPanel Margin="2">
+                        <Button x:Name="btn_d"
+                                Click="btn_d_Click"
+                                IsEnabled="False"
+                                Padding="5 0">
+                            Save Dependency Tree
+                        </Button>
+                    </DockPanel>
+                </DockPanel>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Bottom">
+                <StatusBar>
+                    <StatusBarItem>
+                        <Label x:Name="sbi_Status"
+                               Content="Waiting..." />
+                    </StatusBarItem>
+                </StatusBar>
+            </DockPanel>
+            <DockPanel>
+                <RichTextBox x:Name="Final"
+                             VerticalScrollBarVisibility="Auto" />
+            </DockPanel>
+        </DockPanel>
+    </Grid>
+</Window>
